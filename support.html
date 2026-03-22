@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltHop — Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #059669;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 32px 0 24px;
+    }
+
+    .hero h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .hero p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #059669;
+      margin: 32px 0 12px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 14px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #9ca3af;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      color: #059669;
+    }
+
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 0.9rem;
+      color: #4b5563;
+      line-height: 1.65;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .contact-card a.email-btn {
+      display: inline-block;
+      background: #059669;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.15s ease;
+    }
+
+    .contact-card a.email-btn:hover {
+      background: #047857;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px 40px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    footer a {
+      color: #059669;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .tagline {
+      display: block;
+      margin-top: 12px;
+      font-style: italic;
+      color: #d1d5db;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>VoltHop</h1>
+    <p>Support Center</p>
+  </header>
+
+  <div class="container">
+
+    <div class="hero">
+      <h2>How can we help?</h2>
+      <p>Find answers to common questions below, or reach out to our team directly.</p>
+    </div>
+
+    <!-- Getting Started -->
+    <div class="section-title">Getting Started</div>
+
+    <details class="faq-item">
+      <summary>How do I sign up or sign in?</summary>
+      <div class="faq-answer">
+        Download VoltHop from the App Store or Google Play. You can create an account using your email address, Google account, or Apple ID. If you already have an account, just tap "Sign In" and use the same method you registered with.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I edit my profile?</summary>
+      <div class="faq-answer">
+        Tap the profile icon in the app to view your account details. From there you can update your name, photo, and other information.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I delete my account?</summary>
+      <div class="faq-answer">
+        Go to your profile settings and look for the "Delete Account" option. This will permanently remove your account and all associated data. If you have trouble, email us at <a href="mailto:thatiswackman@gmail.com">thatiswackman@gmail.com</a> and we'll take care of it.
+      </div>
+    </details>
+
+    <!-- Renting a Battery -->
+    <div class="section-title">Renting a Battery</div>
+
+    <details class="faq-item">
+      <summary>How do I find a battery near me?</summary>
+      <div class="faq-answer">
+        Open the app and browse the map view to see available batteries from local suppliers in your area. You can view details like battery type, daily price, and pickup location for each listing.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I request a battery rental?</summary>
+      <div class="faq-answer">
+        Tap on a battery listing to view the details. Select the dates you need it for, then tap "Request Rental." The supplier will receive your request and can approve or decline it. You'll be notified once they respond.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I contact the supplier?</summary>
+      <div class="faq-answer">
+        Once you've connected with a supplier through a rental request, you can coordinate pickup and other details through external messaging — WhatsApp, Messenger, Instagram, SMS, or whatever works best for both of you. VoltHop helps you find each other; communication happens directly between you.
+      </div>
+    </details>
+
+    <!-- Supplying a Battery -->
+    <div class="section-title">Listing Your Battery</div>
+
+    <details class="faq-item">
+      <summary>How do I list my battery as a supplier?</summary>
+      <div class="faq-answer">
+        Switch to supplier mode in the app and tap "Add Battery." Upload a few photos of your e-bike battery, add a description, set your pickup location, daily price, and the dates it's available. Your listing will appear on the map for nearby renters.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I set my availability and pricing?</summary>
+      <div class="faq-answer">
+        When creating or editing your listing, you can set the dates your battery is available and your daily rental price. Update these anytime from your listing page to keep things current.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I approve or reject a rental request?</summary>
+      <div class="faq-answer">
+        When a renter sends a request, you'll receive a notification. Open the request to review the details — rental dates, renter profile — then tap "Approve" or "Decline." The renter will be notified of your decision.
+      </div>
+    </details>
+
+    <!-- Payments & Troubleshooting -->
+    <div class="section-title">Payments &amp; Troubleshooting</div>
+
+    <details class="faq-item">
+      <summary>How do payments work?</summary>
+      <div class="faq-answer">
+        VoltHop does not process payments. All transactions happen directly between the renter and supplier — you agree on a price through the listing, then handle payment between yourselves using whatever method you prefer (cash, Venmo, bank transfer, etc.).
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>The app isn't working or I found a bug</summary>
+      <div class="faq-answer">
+        Sorry about that! Try closing and reopening the app, or check that you're running the latest version. If the issue persists, email us at <a href="mailto:thatiswackman@gmail.com">thatiswackman@gmail.com</a> with a description of what's happening and your device info. We'll look into it as soon as we can.
+      </div>
+    </details>
+
+    <!-- Contact -->
+    <div class="section-title">Still Need Help?</div>
+
+    <div class="contact-card">
+      <h3>Contact Us</h3>
+      <p>Our team is happy to help with anything not covered above.</p>
+      <a class="email-btn" href="mailto:thatiswackman@gmail.com">thatiswackman@gmail.com</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="https://volthop.com/privacy">Privacy Policy</a> · <a href="https://volthop.com/terms">Terms of Service</a>
+    <span class="tagline">Batteries can't fly. You can.</span>
+  </footer>
+
+</body>
+</html>

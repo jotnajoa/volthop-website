@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltHop — Your E-Bike, Powered Locally | P2P Battery Rental</title>
+  <meta name="description" content="Travel with your e-bike, rent a compatible battery from a local owner at your destination. No shipping, no luggage stress. VoltHop connects riders and battery owners worldwide.">
+  <meta name="keywords" content="ebike, battery, rental, sharing, electric bike, travel, power, cycling, peer to peer, local, folding bike, foldable ebike, battery travel, airline battery">
+  <meta name="author" content="VoltHop">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jotnajoa.github.io/volthop-website/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VoltHop — Your E-Bike, Powered Locally">
+  <meta property="og:description" content="Find a compatible e-bike battery from a local owner at your destination. No shipping, no luggage stress.">
+  <meta property="og:image" content="https://jotnajoa.github.io/volthop-website/assets/og-image.png">
+  <meta property="og:url" content="https://jotnajoa.github.io/volthop-website/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VoltHop — Your E-Bike, Powered Locally">
+  <meta name="twitter:description" content="P2P e-bike battery rental. Travel with your bike, rent a battery locally.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#e6eef5',
+              100: '#b3cce0',
+              200: '#80aacc',
+              300: '#4d88b7',
+              400: '#2670a6',
+              500: '#003355',
+              600: '#002d4d',
+              700: '#002240',
+              800: '#001a33',
+              900: '#001122',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VoltHop",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "TravelApplication",
+    "description": "P2P e-bike battery rental platform. Travel with your e-bike, rent a compatible battery from a local owner at your destination.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    }
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-gradient { background: linear-gradient(135deg, #003355 0%, #005588 50%, #0077aa 100%); }
+    .feature-card:hover { transform: translateY(-4px); }
+    .screenshot-scroll { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+    .screenshot-scroll > * { scroll-snap-align: center; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/icon.png" alt="VoltHop" class="w-9 h-9 rounded-xl">
+        <span class="text-xl font-bold text-brand-500">VoltHop</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
+        <a href="#how-it-works" class="hover:text-brand-500 transition">How It Works</a>
+        <a href="#features" class="hover:text-brand-500 transition">Features</a>
+        <a href="#download" class="hover:text-brand-500 transition">Download</a>
+      </div>
+      <a href="#download" class="bg-brand-500 text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-brand-600 transition">Get the App</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-28 pb-20 sm:pt-36 sm:pb-28 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="flex-1 text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Your E-Bike,<br>
+            <span class="text-blue-200">Powered Locally</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-blue-100 mb-8 max-w-lg mx-auto lg:mx-0">
+            Travel with your e-bike, rent a compatible battery from a local owner at your destination. No shipping. No luggage stress. Just local power, wherever you land.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#download" class="inline-flex items-center justify-center bg-white text-brand-500 font-semibold px-8 py-3.5 rounded-full hover:bg-blue-50 transition text-lg">
+              <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download for iOS
+            </a>
+            <div class="inline-flex items-center justify-center bg-white/20 text-white font-medium px-8 py-3.5 rounded-full text-lg cursor-default">
+              <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.2l-2.014 3.48a9.054 9.054 0 00-3.51-.708 9.054 9.054 0 00-3.508.708L6.477 2.2l-.857.496 2.014 3.48A8.58 8.58 0 004 13.2h16a8.58 8.58 0 00-3.634-7.024l2.014-3.48-.857-.496zM8.4 11.4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm7.2 0a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM4 14.4v6a1.2 1.2 0 001.2 1.2h1.2v3.6h2.4v-3.6h6.4v3.6h2.4v-3.6h1.2a1.2 1.2 0 001.2-1.2v-6H4z"/></svg>
+              Android Coming Soon
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+          <div class="relative">
+            <div class="w-64 sm:w-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+              <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.12.35.png" alt="VoltHop app screenshot showing live map with battery listings" class="w-full" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="py-16 sm:py-24 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">The Battery Problem</h2>
+      <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+        You love your e-bike. But when you travel, the battery stays home. Airlines restrict lithium batteries. Shipping is expensive and slow. So your e-bike becomes just a bike.
+      </p>
+      <p class="text-lg sm:text-xl text-brand-500 font-semibold mt-6">
+        VoltHop changes that.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">How It Works</h2>
+
+      <!-- For Renters -->
+      <div class="mb-16">
+        <h3 class="text-xl font-semibold text-brand-500 text-center mb-10">For Riders</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">1. Search</h4>
+            <p class="text-gray-600">Enter your destination, travel dates, and e-bike model. Browse nearby batteries on a live map.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">2. Connect</h4>
+            <p class="text-gray-600">Send a rental request. Chat directly with the battery owner via WhatsApp, Messenger, or SMS.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">3. Ride</h4>
+            <p class="text-gray-600">Pick up the battery, plug it in, and ride your own e-bike like you never left home.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- For Suppliers -->
+      <div>
+        <h3 class="text-xl font-semibold text-brand-500 text-center mb-10">For Battery Owners</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">1. List</h4>
+            <p class="text-gray-600">Got a spare battery? Add photos, set your daily rate in any currency, and publish your listing.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">2. Approve</h4>
+            <p class="text-gray-600">Review rental requests and approve on your terms. You're always in control.</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lg mb-2">3. Earn</h4>
+            <p class="text-gray-600">Earn from riders visiting your city. Your idle battery becomes a side income.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 sm:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Built for Riders</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f5fa;&#xfe0f;</div>
+          <h3 class="font-semibold text-lg mb-2">Live Map Search</h3>
+          <p class="text-gray-600 text-sm">Browse batteries near your destination with filters for dates, price, and bike model.</p>
+        </div>
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f6b2;</div>
+          <h3 class="font-semibold text-lg mb-2">Wide Compatibility</h3>
+          <p class="text-gray-600 text-sm">Supports Velotric, Lectric, Ride1Up, Aventon, Engwe, Brompton, and many more brands.</p>
+        </div>
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f4ac;</div>
+          <h3 class="font-semibold text-lg mb-2">Direct Messaging</h3>
+          <p class="text-gray-600 text-sm">Contact owners via WhatsApp, Messenger, or SMS. No middleman.</p>
+        </div>
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f504;</div>
+          <h3 class="font-semibold text-lg mb-2">Dual Mode</h3>
+          <p class="text-gray-600 text-sm">Switch between renter and supplier mode anytime. Rent batteries on trips, lend yours at home.</p>
+        </div>
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f4b0;</div>
+          <h3 class="font-semibold text-lg mb-2">Any Currency</h3>
+          <p class="text-gray-600 text-sm">Set your daily rate in any currency. VoltHop works globally.</p>
+        </div>
+        <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
+          <div class="text-3xl mb-4">&#x1f512;</div>
+          <h3 class="font-semibold text-lg mb-2">Easy Sign In</h3>
+          <p class="text-gray-600 text-sm">Sign in with Apple, Google, or email. Get started in seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">See It In Action</h2>
+      <div class="screenshot-scroll flex gap-6 overflow-x-auto pb-6 px-4">
+        <div class="flex-none w-56 sm:w-64">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.12.35.png" alt="VoltHop map view showing battery locations" class="w-full" loading="lazy">
+          </div>
+        </div>
+        <div class="flex-none w-56 sm:w-64">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.12.37.png" alt="VoltHop battery listing details" class="w-full" loading="lazy">
+          </div>
+        </div>
+        <div class="flex-none w-56 sm:w-64">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.48.17.png" alt="VoltHop search filters" class="w-full" loading="lazy">
+          </div>
+        </div>
+        <div class="flex-none w-56 sm:w-64">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.48.30.png" alt="VoltHop rental request" class="w-full" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="py-16 sm:py-24 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Traveling with Your Folding E-Bike?</h2>
+      <div class="prose prose-lg text-gray-600 mx-auto space-y-4">
+        <p>
+          If you own a folding electric bike like a Brompton Electric, Tern Vektron, or Dahon K-One, you already know the dilemma: airlines restrict lithium-ion batteries over 100Wh. That means your e-bike can fly with you, but your battery can't.
+        </p>
+        <p>
+          VoltHop solves this by connecting you with local battery owners at your destination. Instead of shipping batteries, renting from bike shops, or riding without power, you borrow from someone who already has a compatible battery sitting at home.
+        </p>
+        <p>
+          It's peer-to-peer, local, and designed specifically for the folding e-bike community. Whether you're commuting in Amsterdam, exploring Tokyo, or cruising through Barcelona, VoltHop keeps your ride electric.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section id="download" class="hero-gradient py-16 sm:py-24 text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Ride?</h2>
+      <p class="text-xl text-blue-100 mb-10">Download VoltHop for free and join the community.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" id="ios-link" class="inline-flex items-center justify-center bg-white text-brand-500 font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition text-lg shadow-lg">
+          <svg class="w-7 h-7 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
+        <div class="inline-flex items-center justify-center bg-white/20 text-white font-medium px-8 py-4 rounded-full text-lg">
+          <svg class="w-7 h-7 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.2l-2.014 3.48a9.054 9.054 0 00-3.51-.708 9.054 9.054 0 00-3.508.708L6.477 2.2l-.857.496 2.014 3.48A8.58 8.58 0 004 13.2h16a8.58 8.58 0 00-3.634-7.024l2.014-3.48-.857-.496zM8.4 11.4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm7.2 0a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM4 14.4v6a1.2 1.2 0 001.2 1.2h1.2v3.6h2.4v-3.6h6.4v3.6h2.4v-3.6h1.2a1.2 1.2 0 001.2-1.2v-6H4z"/></svg>
+          Android Coming Soon
+        </div>
+      </div>
+      <p class="text-blue-200 text-sm mt-6">Free to download. Free to use. No hidden fees.</p>
+    </div>
+  </section>
+
+  <!-- FAQ for SEO -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <details class="group border border-gray-200 rounded-xl p-5">
+          <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900">
+            Can I take my e-bike battery on an airplane?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-gray-600">Most airlines prohibit lithium-ion batteries over 100Wh in both carry-on and checked luggage. Most e-bike batteries exceed this limit. VoltHop solves this by letting you rent a compatible battery at your destination.</p>
+        </details>
+        <details class="group border border-gray-200 rounded-xl p-5">
+          <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900">
+            Which e-bike brands are supported?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-gray-600">VoltHop supports Velotric, Lectric, Ride1Up, Aventon, Engwe, Brompton, Dahon, Tern, Fiido, MATE, and many more. If your battery model isn't listed, you can add a custom listing.</p>
+        </details>
+        <details class="group border border-gray-200 rounded-xl p-5">
+          <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900">
+            Is VoltHop free?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-gray-600">Yes, VoltHop is completely free to download and use. Battery owners set their own rental prices, and transactions happen directly between users.</p>
+        </details>
+        <details class="group border border-gray-200 rounded-xl p-5">
+          <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900">
+            How do I earn money with my spare battery?
+            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-gray-600">Switch to supplier mode, list your battery with photos and a daily rate, and approve rental requests from visiting riders. It's a simple way to earn from an idle battery.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="assets/icon.png" alt="VoltHop" class="w-8 h-8 rounded-lg">
+          <span class="text-white font-semibold">VoltHop</span>
+        </div>
+        <div class="flex gap-6 text-sm">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a>
+          <a href="support.html" class="hover:text-white transition">Support</a>
+        </div>
+        <p class="text-sm">&copy; 2026 VoltHop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I take my e-bike battery on an airplane?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most airlines prohibit lithium-ion batteries over 100Wh in both carry-on and checked luggage. Most e-bike batteries exceed this limit. VoltHop solves this by letting you rent a compatible battery at your destination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which e-bike brands are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VoltHop supports Velotric, Lectric, Ride1Up, Aventon, Engwe, Brompton, Dahon, Tern, Fiido, MATE, and many more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is VoltHop free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VoltHop is completely free to download and use. Battery owners set their own rental prices, and transactions happen directly between users."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
