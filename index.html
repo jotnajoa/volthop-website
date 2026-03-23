@@ -57,7 +57,7 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "VoltHop",
-    "operatingSystem": "iOS, Android",
+    "operatingSystem": "iOS",
     "applicationCategory": "TravelApplication",
     "description": "P2P e-bike battery rental platform. Travel with your e-bike, rent a compatible battery from a local owner at your destination.",
     "offers": {
@@ -88,60 +88,63 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <img src="assets/icon.png" alt="VoltHop" class="w-9 h-9 rounded-xl">
-        <span class="text-xl font-bold text-brand-500">VoltHop</span>
+        <span class="text-xl font-bold" style="color:#003355;">VoltHop</span>
       </div>
       <div class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
-        <a href="#how-it-works" class="hover:text-brand-500 transition">How It Works</a>
-        <a href="#features" class="hover:text-brand-500 transition">Features</a>
-        <a href="#download" class="hover:text-brand-500 transition">Download</a>
+        <a href="#how-it-works" class="hover:text-blue-900 transition">How It Works</a>
+        <a href="#features" class="hover:text-blue-900 transition">Features</a>
+        <a href="#download" class="hover:text-blue-900 transition">Download</a>
       </div>
-      <a href="#download" class="bg-brand-500 text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-brand-600 transition">Get the App</a>
+      <a href="https://apps.apple.com/us/app/volthop/id6759892609" class="text-white text-sm font-medium px-5 py-2 rounded-full transition" style="background:#003355;">Get the App</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-gradient pt-28 pb-20 sm:pt-36 sm:pb-28 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="flex-1 text-center lg:text-left">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Your E-Bike,<br>
-            <span class="text-blue-200">Powered Locally</span>
-          </h1>
-          <p class="text-lg sm:text-xl text-blue-100 mb-8 max-w-lg mx-auto lg:mx-0">
-            Travel with your e-bike, rent a compatible battery from a local owner at your destination. No shipping. No luggage stress. Just local power, wherever you land.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#download" class="inline-flex items-center justify-center bg-white text-brand-500 font-semibold px-8 py-3.5 rounded-full hover:bg-blue-50 transition text-lg">
-              <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              Download for iOS
-            </a>
-            <div class="inline-flex items-center justify-center bg-white/20 text-white font-medium px-8 py-3.5 rounded-full text-lg cursor-default">
-              <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.2l-2.014 3.48a9.054 9.054 0 00-3.51-.708 9.054 9.054 0 00-3.508.708L6.477 2.2l-.857.496 2.014 3.48A8.58 8.58 0 004 13.2h16a8.58 8.58 0 00-3.634-7.024l2.014-3.48-.857-.496zM8.4 11.4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm7.2 0a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM4 14.4v6a1.2 1.2 0 001.2 1.2h1.2v3.6h2.4v-3.6h6.4v3.6h2.4v-3.6h1.2a1.2 1.2 0 001.2-1.2v-6H4z"/></svg>
-              Android Coming Soon
-            </div>
-          </div>
-        </div>
-        <div class="flex-1 flex justify-center">
-          <div class="relative">
-            <div class="w-64 sm:w-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-              <img src="assets/screenshots/Simulator Screenshot - iPhone 16 - 2026-03-03 at 21.12.35.png" alt="VoltHop app screenshot showing live map with battery listings" class="w-full" loading="eager">
-            </div>
-          </div>
-        </div>
+  <section class="hero-gradient pt-28 pb-20 sm:pt-36 sm:pb-28 text-white relative overflow-hidden">
+    <!-- Video Background -->
+    <div id="hero-video-container" class="absolute inset-0 z-0 hidden">
+      <video id="hero-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
+        <source src="assets/promo.mp4" type="video/mp4">
+      </video>
+      <button id="video-toggle" onclick="toggleVideo()" class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm hover:bg-white/30 transition z-10">Pause</button>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Don't Let Airlines<br>
+          <span class="text-blue-200">Ground Your E-Bike</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl">
+          Airlines ban e-bike batteries. VoltHop lets you rent one from a local rider at your destination. Fly light, ride electric.
+        </p>
+        <a href="https://apps.apple.com/us/app/volthop/id6759892609" class="inline-flex items-center justify-center font-semibold px-8 py-3.5 rounded-full hover:bg-blue-50 transition text-lg" style="background:#fff;color:#003355;">
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
       </div>
     </div>
   </section>
+  <script>
+    function toggleVideo() {
+      const v = document.getElementById('hero-video');
+      const b = document.getElementById('video-toggle');
+      if (v.paused) { v.play(); b.textContent = 'Pause'; }
+      else { v.pause(); b.textContent = 'Play'; }
+    }
+    // Show video container if promo.mp4 exists
+    const v = document.getElementById('hero-video');
+    v.addEventListener('canplay', () => { document.getElementById('hero-video-container').classList.remove('hidden'); });
+  </script>
 
   <!-- Problem Statement -->
   <section class="py-16 sm:py-24 bg-gray-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">The Battery Problem</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Your Battery Can't Fly. You Can.</h2>
       <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
-        You love your e-bike. But when you travel, the battery stays home. Airlines restrict lithium batteries. Shipping is expensive and slow. So your e-bike becomes just a bike.
+        Airlines ban lithium batteries over 100Wh. Shipping costs $80+ and takes a week. So every trip, your e-bike sits at home — or rides without power.
       </p>
-      <p class="text-lg sm:text-xl text-brand-500 font-semibold mt-6">
-        VoltHop changes that.
+      <p class="text-lg sm:text-xl font-semibold mt-6" style="color:#003355;">
+        VoltHop connects you with local riders who'll lend you a compatible battery at your destination.
       </p>
     </div>
   </section>
@@ -153,25 +156,25 @@
 
       <!-- For Renters -->
       <div class="mb-16">
-        <h3 class="text-xl font-semibold text-brand-500 text-center mb-10">For Riders</h3>
+        <h3 class="text-xl font-semibold text-[#003355] text-center mb-10">For Riders</h3>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="text-center p-6">
-            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-[#003355]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             </div>
             <h4 class="font-semibold text-lg mb-2">1. Search</h4>
             <p class="text-gray-600">Enter your destination, travel dates, and e-bike model. Browse nearby batteries on a live map.</p>
           </div>
           <div class="text-center p-6">
-            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-[#003355]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
             </div>
             <h4 class="font-semibold text-lg mb-2">2. Connect</h4>
             <p class="text-gray-600">Send a rental request. Chat directly with the battery owner via WhatsApp, Messenger, or SMS.</p>
           </div>
           <div class="text-center p-6">
-            <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-[#003355]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
             <h4 class="font-semibold text-lg mb-2">3. Ride</h4>
             <p class="text-gray-600">Pick up the battery, plug it in, and ride your own e-bike like you never left home.</p>
@@ -181,7 +184,7 @@
 
       <!-- For Suppliers -->
       <div>
-        <h3 class="text-xl font-semibold text-brand-500 text-center mb-10">For Battery Owners</h3>
+        <h3 class="text-xl font-semibold text-[#003355] text-center mb-10">For Battery Owners</h3>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="text-center p-6">
             <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -230,14 +233,14 @@
           <p class="text-gray-600 text-sm">Contact owners via WhatsApp, Messenger, or SMS. No middleman.</p>
         </div>
         <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
-          <div class="text-3xl mb-4">&#x1f504;</div>
-          <h3 class="font-semibold text-lg mb-2">Dual Mode</h3>
-          <p class="text-gray-600 text-sm">Switch between renter and supplier mode anytime. Rent batteries on trips, lend yours at home.</p>
+          <div class="text-3xl mb-4">&#x1f4b0;</div>
+          <h3 class="font-semibold text-lg mb-2">Earn When You're Home</h3>
+          <p class="text-gray-600 text-sm">Register as a supplier and earn when riders visit your city. Your idle battery becomes passive income while you're not riding.</p>
         </div>
         <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
-          <div class="text-3xl mb-4">&#x1f4b0;</div>
-          <h3 class="font-semibold text-lg mb-2">Any Currency</h3>
-          <p class="text-gray-600 text-sm">Set your daily rate in any currency. VoltHop works globally.</p>
+          <div class="text-3xl mb-4">&#x1f30d;</div>
+          <h3 class="font-semibold text-lg mb-2">Works Globally</h3>
+          <p class="text-gray-600 text-sm">Set your daily rate in any currency. Amsterdam, Tokyo, Barcelona — VoltHop keeps you electric anywhere.</p>
         </div>
         <div class="feature-card bg-white rounded-2xl p-6 shadow-sm transition duration-300">
           <div class="text-3xl mb-4">&#x1f512;</div>
@@ -300,15 +303,11 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Ride?</h2>
       <p class="text-xl text-blue-100 mb-10">Download VoltHop for free and join the community.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" id="ios-link" class="inline-flex items-center justify-center bg-white text-brand-500 font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition text-lg shadow-lg">
+      <div class="flex justify-center">
+        <a href="https://apps.apple.com/us/app/volthop/id6759892609" class="inline-flex items-center justify-center font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition text-lg shadow-lg" style="background:#fff;color:#003355;">
           <svg class="w-7 h-7 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           Download for iOS
         </a>
-        <div class="inline-flex items-center justify-center bg-white/20 text-white font-medium px-8 py-4 rounded-full text-lg">
-          <svg class="w-7 h-7 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.2l-2.014 3.48a9.054 9.054 0 00-3.51-.708 9.054 9.054 0 00-3.508.708L6.477 2.2l-.857.496 2.014 3.48A8.58 8.58 0 004 13.2h16a8.58 8.58 0 00-3.634-7.024l2.014-3.48-.857-.496zM8.4 11.4a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm7.2 0a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM4 14.4v6a1.2 1.2 0 001.2 1.2h1.2v3.6h2.4v-3.6h6.4v3.6h2.4v-3.6h1.2a1.2 1.2 0 001.2-1.2v-6H4z"/></svg>
-          Android Coming Soon
-        </div>
       </div>
       <p class="text-blue-200 text-sm mt-6">Free to download. Free to use. No hidden fees.</p>
     </div>
