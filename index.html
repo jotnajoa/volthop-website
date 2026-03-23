@@ -8,14 +8,14 @@
   <meta name="keywords" content="ebike battery airplane, can i take ebike battery on plane, e-bike battery airline restrictions, folding electric bike travel, rent ebike battery, ship ebike battery cost, check in ebike battery airport, ebike battery rental, peer to peer ebike, folding ebike travel solution, brompton electric travel, tern vektron battery, lectric xp travel, VoltHop">
   <meta name="author" content="VoltHop">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://jotnajoa.github.io/volthop-website/">
+  <link rel="canonical" href="https://volthop.app/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="VoltHop — Your E-Bike, Powered Locally">
   <meta property="og:description" content="Find a compatible e-bike battery from a local owner at your destination. No shipping, no luggage stress.">
-  <meta property="og:image" content="https://jotnajoa.github.io/volthop-website/assets/og-image.png">
-  <meta property="og:url" content="https://jotnajoa.github.io/volthop-website/">
+  <meta property="og:image" content="https://volthop.app/assets/og-image.png">
+  <meta property="og:url" content="https://volthop.app/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -79,6 +79,7 @@
     .feature-card:hover { transform: translateY(-4px); }
     .screenshot-scroll { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
     .screenshot-scroll > * { scroll-snap-align: center; }
+    .nav-link.active { color: #003355; font-weight: 600; }
   </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
@@ -91,9 +92,10 @@
         <span class="text-xl font-bold" style="color:#003355;">VoltHop</span>
       </div>
       <div class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
-        <a href="#how-it-works" class="hover:text-blue-900 transition">How It Works</a>
-        <a href="#features" class="hover:text-blue-900 transition">Features</a>
-        <a href="#download" class="hover:text-blue-900 transition">Download</a>
+        <a href="#how-it-works" class="nav-link hover:text-blue-900 transition" data-section="how-it-works">How It Works</a>
+        <a href="#features" class="nav-link hover:text-blue-900 transition" data-section="features">Features</a>
+        <a href="#download" class="nav-link hover:text-blue-900 transition" data-section="download">Download</a>
+        <a href="contact.html" class="nav-link hover:text-blue-900 transition">Contact</a>
       </div>
       <a href="#download" class="text-white text-sm font-medium px-5 py-2 rounded-full transition" style="background:#003355;">Get the App</a>
     </div>
@@ -106,7 +108,10 @@
       <video id="hero-video" autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
         <source src="assets/promo.mp4" type="video/mp4">
       </video>
-      <button id="video-toggle" onclick="toggleVideo()" class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm hover:bg-white/30 transition z-10">Pause</button>
+      <button id="video-toggle" onclick="toggleVideo()" class="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/30 transition z-10" aria-label="Pause video">
+        <svg id="pause-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        <svg id="play-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
       <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
@@ -133,9 +138,10 @@
   <script>
     function toggleVideo() {
       const v = document.getElementById('hero-video');
-      const b = document.getElementById('video-toggle');
-      if (v.paused) { v.play(); b.textContent = 'Pause'; }
-      else { v.pause(); b.textContent = 'Play'; }
+      const pauseIcon = document.getElementById('pause-icon');
+      const playIcon = document.getElementById('play-icon');
+      if (v.paused) { v.play(); pauseIcon.classList.remove('hidden'); playIcon.classList.add('hidden'); }
+      else { v.pause(); pauseIcon.classList.add('hidden'); playIcon.classList.remove('hidden'); }
     }
     // Show video container if promo.mp4 exists
     const v = document.getElementById('hero-video');
@@ -432,6 +438,7 @@
           <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
           <a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a>
           <a href="support.html" class="hover:text-white transition">Support</a>
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
         </div>
         <p class="text-sm">&copy; 2026 VoltHop. All rights reserved.</p>
       </div>
@@ -494,6 +501,22 @@
       }
     ]
   }
+  </script>
+
+  <!-- Scroll-based nav highlight -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -60% 0px' });
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
