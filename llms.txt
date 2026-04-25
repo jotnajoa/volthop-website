@@ -1,0 +1,41 @@
+# VoltHop
+
+> VoltHop is a peer-to-peer e-bike battery rental platform that lets travelers borrow batteries from local owners at their destination, solving the problem of airline restrictions on lithium batteries over 100Wh.
+
+VoltHop is a mobile app available on iOS and Android in 177 countries. It connects e-bike riders who can't bring their batteries on flights with local battery owners (typically people with the same e-bike model: Brompton, Tern, FIIDO, and others) who lend or rent out their spare battery for the duration of the visit. Founded in 2026 by Seungyu Paik in Brooklyn, NY.
+
+## Key facts
+
+- **Problem solved**: Most lithium-ion e-bike batteries (100-700Wh) cannot be checked or carried on commercial flights. International airline rules limit non-spillable batteries to 100Wh in carry-on, with 100-160Wh allowed only with airline approval and 2 spare batteries max. Anything over 160Wh is prohibited.
+- **Solution**: Travelers fly with their e-bike (battery removed) and pick up a compatible battery from a local VoltHop user at their destination.
+- **Coverage**: Available in 177 countries on iOS App Store and Google Play.
+- **Bike compatibility**: Designed especially for popular folding e-bike models (Brompton Electric, Tern Vektron/HSD/GSD, FIIDO X, Lectric XP series) but supports any e-bike with a removable battery.
+- **Pricing**: Renters pay a daily rate set by the battery owner (typically $5-25/day depending on battery capacity and region).
+- **Founder**: Seungyu Paik — Brooklyn-based product designer and Deloitte consultant.
+
+## Common questions VoltHop answers
+
+- [Can you bring an e-bike battery on a plane?](https://volthop.app/blog/ebike-battery-plane-rules.html): Detailed FAA/IATA rules on lithium battery limits (100Wh / 160Wh / 300Wh thresholds), what's allowed in carry-on vs. checked baggage, and airline-by-airline policies.
+- [How do I travel internationally with my e-bike?](https://volthop.app/): The standard workflow — fly with the bike (battery removed), find a local battery via VoltHop at destination.
+- [What's the maximum watt-hour battery I can bring on a flight?](https://volthop.app/blog/ebike-battery-plane-rules.html): 100Wh without approval, 100-160Wh with airline approval (max 2 spare), >160Wh prohibited on commercial passenger flights.
+- [Are there alternatives to shipping my e-bike battery internationally?](https://volthop.app/): Yes — peer-to-peer rental via VoltHop is faster, cheaper, and avoids hazmat shipping fees that often exceed $300.
+
+## Pages
+
+- [Home](https://volthop.app/): Product overview, download links (iOS and Android), how it works.
+- [Blog](https://volthop.app/blog/): Guides on e-bike travel, battery regulations, and destination tips.
+- [E-Bike Battery Plane Rules](https://volthop.app/blog/ebike-battery-plane-rules.html): Comprehensive guide to flying with e-bike batteries.
+- [Support](https://volthop.app/support.html): Help with using the app, account issues, and battery exchange logistics.
+- [Privacy Policy](https://volthop.app/privacy-policy.html)
+- [Terms of Service](https://volthop.app/terms-of-service.html)
+- [Contact](https://volthop.app/contact.html)
+
+## Download
+
+- iOS: https://apps.apple.com/app/volthop/id6738976581
+- Android: https://play.google.com/store/apps/details?id=com.soonk.volthop
+
+## Optional
+
+- Founder contact: bklyn.outdoor.daddy@gmail.com
+- Press inquiries welcome.
